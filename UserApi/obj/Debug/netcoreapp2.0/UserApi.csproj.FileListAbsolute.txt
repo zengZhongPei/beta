@@ -1,0 +1,11 @@
+D:\工作\学习\beta\UserApi\obj\Debug\netcoreapp2.0\UserApi.csproj.CoreCompileInputs.cache
+D:\工作\学习\beta\UserApi\obj\Debug\netcoreapp2.0\UserApi.AssemblyInfoInputs.cache
+D:\工作\学习\beta\UserApi\obj\Debug\netcoreapp2.0\UserApi.AssemblyInfo.cs
+D:\工作\学习\beta\UserApi\bin\Debug\netcoreapp2.0\UserApi.deps.json
+D:\工作\学习\beta\UserApi\bin\Debug\netcoreapp2.0\UserApi.runtimeconfig.json
+D:\工作\学习\beta\UserApi\bin\Debug\netcoreapp2.0\UserApi.runtimeconfig.dev.json
+D:\工作\学习\beta\UserApi\bin\Debug\netcoreapp2.0\UserApi.dll
+D:\工作\学习\beta\UserApi\bin\Debug\netcoreapp2.0\UserApi.pdb
+D:\工作\学习\beta\UserApi\obj\Debug\netcoreapp2.0\UserApi.csprojAssemblyReference.cache
+D:\工作\学习\beta\UserApi\obj\Debug\netcoreapp2.0\UserApi.dll
+D:\工作\学习\beta\UserApi\obj\Debug\netcoreapp2.0\UserApi.pdb
