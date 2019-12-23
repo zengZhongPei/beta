@@ -1,0 +1,52 @@
+# https://docs.docker.com/compose/compose-file/#build 文档地址
+version: '3'
+services:
+  MongoDB:
+    image: mongo
+    container_name: mongo01
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mongo123
+    #volumes:
+     # - ./MongoDB/data/db1:/data/db
+    ports:
+      - 27016:27017
+    networks:
+      - mongoNetWorks
+  MySQL:
+    image: mysql/mysql-server
+    container_name: mysql01
+    restart: always
+    environment:
+    # 更多环境变量配置参考地址 https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html  
+      - MYSQL_ROOT_PASSWORD=root123
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test123
+    volumes:
+      #- ./MySQL/data:/var/lib/mysql
+      - ./MySQL/conf/my.cnf:/etc/my.cnf
+      - ./MySQL/init:/docker-entrypoint-initdb.d/
+    ports:
+      - 3306:3306
+    networks:
+      - mongoNetWorks
+  beta:
+    build:
+      context: .
+      dockerfile: Dockerfile_userapi
+      args:
+        buildno: 1
+    image: beta
+    container_name: UserApi
+    restart: always
+    depends_on:
+      - MySQL
+    ports:
+      - 7654:80
+    networks:
+      - mongoNetWorks
+networks:
+  mongoNetWorks:
+    driver: bridge
+    

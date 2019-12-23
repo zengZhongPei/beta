@@ -10,7 +10,7 @@ using UserApi.Data;
 namespace UserApi.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20191221080743_init")]
+    [Migration("20191223065600_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
