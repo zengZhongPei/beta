@@ -5,21 +5,22 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UserApi.Data;
-using UserApi.Model;
+using UserApi.Entity.Model;
+using UserApi.Exception;
 
 namespace UserApi.Controllers
 {
-    [Route("api/[controller]")]
-    public class ValuesController : Controller
+    [Route("api/users")]
+    public class UserController : BaseController
     {
         private readonly UserContext _userContext;
-        public ValuesController(UserContext userContext)
+        public UserController(UserContext userContext)
         {
             _userContext = userContext;
         }
 
-        [HttpGet]
-        [Route("addUser")]
+        [HttpPatch]
+        [Route("")]
         public async Task<IActionResult> AddUserAsync()
         {
             await _userContext.Users.AddAsync(new User() { Name="张三",Company = "HJ"});
@@ -28,10 +29,15 @@ namespace UserApi.Controllers
         }
 
         [HttpGet]
-        [Route("getUser")]
-        public async Task<IActionResult> GetUserAsync()
+        [Route("")]
+        public async Task<IActionResult> Get()
         {
-            var result = await _userContext.Users.SingleOrDefaultAsync(l=>l.Name=="张三");
+            var result = await _userContext.Users
+                .AsNoTracking()
+                .Include(l=>l.Properties)
+                .SingleOrDefaultAsync(l=>l.Id == userIdentity.UserId);
+            if (result == null)
+                throw new System.Exception($"没有找到用户{userIdentity.UserId}");
             return Json(result);
         }
     }

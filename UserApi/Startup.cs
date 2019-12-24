@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using UserApi.Data;
+using UserApi.Filters;
 
 namespace UserApi
 {
@@ -25,7 +26,12 @@ namespace UserApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(Options =>
+            {
+                //把自定义filter注册到mvc里面
+                Options.Filters.Add(typeof(GlobalExceptionFilter)); 
+            });
+
             //注册mysql
             services.AddDbContext<UserContext>(options =>
             {
@@ -40,7 +46,6 @@ namespace UserApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseMvc();
         }
     }

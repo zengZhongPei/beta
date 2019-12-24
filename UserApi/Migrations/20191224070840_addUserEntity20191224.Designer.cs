@@ -10,9 +10,10 @@ using UserApi.Data;
 namespace UserApi.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20191224070840_addUserEntity20191224")]
+    partial class addUserEntity20191224
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,13 +50,13 @@ namespace UserApi.Migrations
 
                     b.Property<string>("City");
 
-                    b.Property<int>("CityId");
+                    b.Property<int?>("CityId");
 
                     b.Property<string>("Company");
 
                     b.Property<string>("Email");
 
-                    b.Property<byte>("Gender");
+                    b.Property<byte?>("Gender");
 
                     b.Property<string>("Name");
 
@@ -65,7 +66,7 @@ namespace UserApi.Migrations
 
                     b.Property<string>("Province");
 
-                    b.Property<int>("ProvinceId");
+                    b.Property<int?>("ProvinceId");
 
                     b.Property<string>("Tel");
 
