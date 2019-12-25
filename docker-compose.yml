@@ -39,7 +39,7 @@ services:
       dockerfile: Dockerfile_userapi
       args:
         buildno: 1.0
-    image: beta:v1.1
+    image: beta:v1.2
     container_name: UserApi
     restart: always
     depends_on:

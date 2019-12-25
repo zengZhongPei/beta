@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UserApi</name>
+    </assembly>
+    <members>
+        <member name="M:UserApi.Controllers.UserController.Patch(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{UserApi.Entity.Model.User})">
+            <summary>
+            部分更新用户
+             参数传入文档:http://jsonpatch.com/
+            </summary>
+            <param name="patch">传入示例: [{ "op": "replace", "path": "/name", "value": "李四" },{"op": "replace", "path": "/Properties", "value": [{"Key":"userage","Value":"A+","Text":"A+"},{"Key":"userage","Value":"C+","Text":"C+"}]}]</param>
+            <returns></returns>
+        </member>
+        <member name="M:UserApi.Controllers.UserController.Get">
+            <summary>
+            获取用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UserApi.Entity.Dtos.UserIdentity">
+            <summary>
+            数据传输用户对象
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Dtos.UserIdentity.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Dtos.UserIdentity.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Dtos.UserIdentity.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.BPFile.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.BPFile.OriginFilePath">
+            <summary>
+            上传文件的原始地址
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.BPFile.FormatFilePath">
+            <summary>
+            格式化转换后的地址
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.BPFile.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Company">
+            <summary>
+            公司
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Title">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Avatar">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Gender">
+            <summary>
+            性别 1:男  2:女
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Address">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Tel">
+            <summary>
+            公司电话
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.ProvinceId">
+            <summary>
+            省ID
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Province">
+            <summary>
+            省名称
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.CityId">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.City">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.NameCard">
+            <summary>
+            名片地址
+            </summary>
+        </member>
+        <member name="P:UserApi.Entity.Model.User.Properties">
+            <summary>
+            用户属性列表
+             注意事项；如果查询需要用include。子类里面需要包含 "类名+Id" 属性字段则使用include会自动映射
+            </summary>
+        </member>
+        <member name="T:UserApi.Exception.JsonErrorRespone">
+            <summary>
+            自定义异常返回类
+            </summary>
+        </member>
+        <member name="P:UserApi.Exception.JsonErrorRespone.Message">
+            <summary>
+            异常消息
+            </summary>
+        </member>
+        <member name="P:UserApi.Exception.JsonErrorRespone.DevelopmentMessage">
+            <summary>
+            开发环境的异常信息
+            </summary>
+        </member>
+        <member name="T:UserApi.Exception.UserOperationException">
+            <summary>
+            自定义用户异常类型
+            </summary>
+        </member>
+        <member name="T:UserApi.Filters.GlobalExceptionFilter">
+            <summary>
+            全局异常捕获
+            </summary>
+        </member>
+        <member name="F:UserApi.Filters.GlobalExceptionFilter._Logger">
+            <summary>
+             logger 日志注册进来。
+            </summary>
+        </member>
+        <member name="F:UserApi.Filters.GlobalExceptionFilter._environment">
+            <summary>
+            当前的环境变量注册进来
+            </summary>
+        </member>
+    </members>
+</doc>

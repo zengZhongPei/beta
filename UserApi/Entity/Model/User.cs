@@ -4,6 +4,13 @@ namespace UserApi.Entity.Model
 {
     public class User
     {
+
+        public User()
+        {
+            //初始化一下属性避免从数据库里面出来直接是null
+            Properties=new List<UserProperty>();
+        }
+
         public int Id { get; set; }
 
         /// <summary>

@@ -9,6 +9,6 @@ namespace UserApi.Controllers
 {
     public class BaseController:Controller
     {
-        protected UserIdentity userIdentity => new UserIdentity() { UserId=4,Name = "张三"};
+        protected UserIdentity userIdentity => new UserIdentity() { UserId=2,Name = "张三"};
     }
 }
