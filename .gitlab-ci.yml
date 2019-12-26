@@ -9,6 +9,7 @@ restore:
   stage: build #此处里面的值应该和stages保持一致
   script: # 执行的脚本
    # 执行以下net的发布命令
+   - dotnet restore
    - dotnet build 
 unityTest:
   stage: test
