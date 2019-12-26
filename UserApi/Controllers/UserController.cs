@@ -78,13 +78,7 @@ namespace UserApi.Controllers
         [Route("getuser")]
         public async Task<IActionResult> GetUser()
         {
-            var result = await _userContext.Users
-                .AsNoTracking()
-                .Include(l => l.Properties)
-                .SingleOrDefaultAsync(l => l.Id == userIdentity.UserId);
-            if (result == null)
-                throw new UserOperationException($"没有找到用户{userIdentity.UserId}");
-            return Json(result);
+            return Json(new{message= "这是CI持续集成:say hello" });
         }
     }
 }
