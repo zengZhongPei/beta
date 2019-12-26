@@ -78,7 +78,7 @@ namespace UserApi.Controllers
         [Route("getuser")]
         public async Task<IActionResult> GetUser()
         {
-            return Json(new{message= "这是CI持续集成:say hello!" });
+            return Json(new{message= "这是CI持续集成:say hello !" });
         }
     }
 }
