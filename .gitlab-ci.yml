@@ -20,8 +20,8 @@ package:
   script:
     # push到dockerHub
    - docker build -f Dockerfile_userapi -t betauserapi:test .
-   - docker login -u 984947426 -p 984947426+ https://hub.docker.com/
-   - docker tag betauserapi:test https://hub.docker.com/betauserapi:test
+   - docker login -u 984947426 -p 984947426+ https://www.docker.com/
+   - docker tag betauserapi:test https://www.docker.com/betauserapi:test
    - docker push betauserapi:test
 publish:
   stage: deploy
