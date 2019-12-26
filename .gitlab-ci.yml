@@ -1,0 +1,30 @@
+# gitlab-ci文档地址:https://docs.gitlab.com/ce/ci/yaml/#stages
+# dotnet build等其他相关命令文档地址:https://docs.microsoft.com/zh-cn/dotnet/core/tools/dotnet-build
+stages:
+  - build 
+  - test
+  - package
+  - deploy
+restore:
+  stage: build #此处里面的值应该和stages保持一致
+  script: # 执行的脚本
+   # 执行以下net的发布命令
+   - dotnet build 
+unityTest:
+  stage: test
+  script:
+  # 执行单元测试
+   - dotnet test
+package:
+  stage: package
+  script:
+    # push到dockerHub
+   - docker build -f Dockerfile_userapi -t betauserapi:test .
+   - docker login -u 984947426 -p 984947426+ https://hub.docker.com/
+   - docker tag betauserapi:test https://hub.docker.com/betauserapi:test
+   - docker push betauserapi:test
+publish:
+  stage: deploy
+  script:
+   # 执行dockecompose 发布命令
+   - doccker run -d -p 7654:80 --name userapi betauserapi:test

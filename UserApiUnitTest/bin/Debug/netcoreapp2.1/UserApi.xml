@@ -18,6 +18,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:UserApi.Controllers.UserController.GetUser">
+            <summary>
+            获取用户
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:UserApi.Entity.Dtos.UserIdentity">
             <summary>
             数据传输用户对象
