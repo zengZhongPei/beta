@@ -71,6 +71,25 @@ namespace UserApi.Controllers
         }
 
         /// <summary>
+        /// 如果用户存在就返回信息不存在就创建一个用户
+        /// </summary>
+        /// <param name="phone"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("check-or-create")]
+        public async Task<IActionResult> CheckOrCreateAsync(string phone)
+        {
+            //TBD 需要做一下手机号码验证
+
+            if (!(await _userContext.Users.AnyAsync(u=>u.Phone == phone)))
+            {
+                //不存在就创建一个
+                await _userContext.Users.AddAsync(new User() {Phone = phone});
+            }
+            return Ok();
+        }
+
+        /// <summary>
         /// 获取用户
         /// </summary>
         /// <returns></returns>
