@@ -2,7 +2,10 @@ D:\工作\学习\beta\IdentityServer\obj\Debug\netcoreapp2.0\IdentityServer.cspr
 D:\工作\学习\beta\IdentityServer\obj\Debug\netcoreapp2.0\IdentityServer.AssemblyInfoInputs.cache
 D:\工作\学习\beta\IdentityServer\obj\Debug\netcoreapp2.0\IdentityServer.AssemblyInfo.cs
 D:\工作\学习\beta\IdentityServer\bin\Debug\netcoreapp2.0\IdentityServer.deps.json
-D:\工作\学习\beta\IdentityServer\bin\Debug\netcoreapp2.0\IdentityServer.runtimeconfig.json
-D:\工作\学习\beta\IdentityServer\bin\Debug\netcoreapp2.0\IdentityServer.runtimeconfig.dev.json
 D:\工作\学习\beta\IdentityServer\bin\Debug\netcoreapp2.0\IdentityServer.dll
 D:\工作\学习\beta\IdentityServer\obj\Debug\netcoreapp2.0\IdentityServer.csprojAssemblyReference.cache
+D:\工作\学习\beta\IdentityServer\bin\Debug\netcoreapp2.0\IdentityServer.pdb
+D:\工作\学习\beta\IdentityServer\obj\Debug\netcoreapp2.0\IdentityServer.dll
+D:\工作\学习\beta\IdentityServer\obj\Debug\netcoreapp2.0\IdentityServer.pdb
+D:\工作\学习\beta\IdentityServer\bin\Debug\netcoreapp2.0\IdentityServer.runtimeconfig.json
+D:\工作\学习\beta\IdentityServer\bin\Debug\netcoreapp2.0\IdentityServer.runtimeconfig.dev.json

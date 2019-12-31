@@ -18,6 +18,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:UserApi.Controllers.UserController.CheckOrCreateAsync(System.String)">
+            <summary>
+            如果用户存在就返回信息不存在就创建一个用户
+            </summary>
+            <param name="phone"></param>
+            <returns></returns>
+        </member>
         <member name="M:UserApi.Controllers.UserController.GetUser">
             <summary>
             获取用户

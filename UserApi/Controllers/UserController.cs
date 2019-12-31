@@ -81,12 +81,15 @@ namespace UserApi.Controllers
         {
             //TBD 需要做一下手机号码验证
 
-            if (!(await _userContext.Users.AnyAsync(u=>u.Phone == phone)))
+            var user = await _userContext.Users.SingleOrDefaultAsync(u => u.Phone == phone);
+            if (user == null)
             {
                 //不存在就创建一个
-                await _userContext.Users.AddAsync(new User() {Phone = phone});
+                user= new User() { Phone = phone,Name = phone};
+                await _userContext.Users.AddAsync(user);
+                await _userContext.SaveChangesAsync();
             }
-            return Ok();
+            return Ok(user.Id);
         }
 
         /// <summary>
