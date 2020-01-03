@@ -20,6 +20,7 @@ namespace UserApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://+:64580")
                 .Build();
     }
 }

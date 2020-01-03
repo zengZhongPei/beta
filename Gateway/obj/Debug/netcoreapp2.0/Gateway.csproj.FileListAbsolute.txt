@@ -1,0 +1,14 @@
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.csproj.CoreCompileInputs.cache
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.AssemblyInfoInputs.cache
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.AssemblyInfo.cs
+D:\工作\学习\beta\Gateway\bin\Debug\netcoreapp2.0\Gateway.deps.json
+D:\工作\学习\beta\Gateway\bin\Debug\netcoreapp2.0\Gateway.runtimeconfig.json
+D:\工作\学习\beta\Gateway\bin\Debug\netcoreapp2.0\Gateway.runtimeconfig.dev.json
+D:\工作\学习\beta\Gateway\bin\Debug\netcoreapp2.0\Gateway.dll
+D:\工作\学习\beta\Gateway\bin\Debug\netcoreapp2.0\Gateway.pdb
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.csprojAssemblyReference.cache
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.RazorAssemblyInfo.cache
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.RazorAssemblyInfo.cs
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.RazorTargetAssemblyInfo.cache
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.dll
+D:\工作\学习\beta\Gateway\obj\Debug\netcoreapp2.0\Gateway.pdb

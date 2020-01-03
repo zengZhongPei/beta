@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace IdentityServer
+namespace Gateway
 {
     public class Program
     {
@@ -19,8 +19,13 @@ namespace IdentityServer
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((context, builder) =>
+                    {
+                        builder.SetBasePath(context.HostingEnvironment.ContentRootPath)
+                            .AddJsonFile("./Config/Ocelot.json");
+                    })
                 .UseStartup<Startup>()
-                .UseUrls("http://+:55219")
+                .UseUrls("http://+:54009")
                 .Build();
     }
 }

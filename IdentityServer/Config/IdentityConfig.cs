@@ -30,7 +30,7 @@ namespace IdentityServer.Config
         {
             return new List<ApiResource>()
             {
-                new ApiResource("UserApi","User Server") //支持可访问的resource
+                new ApiResource("Gateway","User Server") //支持可访问的resource
             };
         }
 
@@ -53,7 +53,7 @@ namespace IdentityServer.Config
                     },
                     AllowedScopes = new List<string>()
                     {
-                        "UserApi",
+                        "Gateway",
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.OfflineAccess,

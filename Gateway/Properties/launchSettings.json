@@ -2,36 +2,31 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
-    "iis": {
-      "applicationUrl": "http://localhost/UserApi",
-      "sslPort": 0
-    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:64580/",
+      "applicationUrl": "http://localhost:54009/",
       "sslPort": 0
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "Project",
-      "launchUrl": "api/values",
+      "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "UserApi": {
+    "Gateway": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:64579/"
+      "applicationUrl": "http://localhost:54010/"
     },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/values"
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}"
     }
   }
 }

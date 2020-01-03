@@ -22,8 +22,11 @@ namespace IdentityServer.Services.impl
 
         public async Task<int> CheckOrCreate(string phone)
         {
-            var content = new StringContent(JsonConvert.SerializeObject(new {phone}));
-            var result=await _httpClient.PostAsync($"{userServerUrl}api/users/check-or-create", content);
+            var paramDic=new Dictionary<string,string>()
+            {
+                { "phone",phone}
+            };
+            var result=await _httpClient.PostAsync($"{userServerUrl}api/users/check-or-create", new FormUrlEncodedContent(paramDic));
             if (result.IsSuccessStatusCode)
             {
                 var userId =await result.Content.ReadAsStringAsync();

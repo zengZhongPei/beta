@@ -1,0 +1,35 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 55219
+        }
+      ],
+      "UpstreamPathTemplate": "/login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 64580
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/user",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "secret",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:54009"
+  }
+}
